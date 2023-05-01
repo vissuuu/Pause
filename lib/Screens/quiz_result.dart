@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:the_pause/Screens/quiz.dart';
+
 class MeditativeMasteryQuizPage extends StatelessWidget {
 
   @override
@@ -85,16 +87,34 @@ class MeditativeMasteryQuizPage extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: 35),
-                        Text(
-                          'Here are your awaited \n results',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            color: Colors.black87,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        FutureBuilder(
+                            future: res,
+                            builder: (context, AsyncSnapshot snapshot){
+                              if(snapshot.hasData){
+                                return Text(
+                                  'Here are your awaited \n results: ${snapshot.data}',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black87,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                );
+                              }
+                              else{
+                                return Text(
+                                  'Here are your awaited \n results: ',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black87,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                );
+                              }
+                            }),
                         SizedBox(height: 0),
                         Image.asset(
                           'assets/images/quiz_result.png',
@@ -175,4 +195,3 @@ class MeditativeMasteryQuizPage extends StatelessWidget {
     );
   }
 }
-

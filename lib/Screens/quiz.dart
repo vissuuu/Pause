@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:the_pause/model/flask.dart';
 import 'quiz_result.dart';
 
+var res;
+
 class Quiz extends StatefulWidget {
   @override
   _MyPageState createState() => _MyPageState();
 }
 
 class _MyPageState extends State<Quiz> {
-  var res;
+
   int q1 = 0;
   int q2 = 0;
   int q3 = 0;
@@ -1307,10 +1309,10 @@ class _MyPageState extends State<Quiz> {
                   res =predictAnx([q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13,q14,q15, q16, q17, q18, q19]);
                 });
 
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => MeditativeMasteryQuizPage()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MeditativeMasteryQuizPage()),
+                );
               },
               child: Text(
                 'Get your results!',
