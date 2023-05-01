@@ -48,7 +48,7 @@ class _homeState extends State<home> {
                       child: Row(
 
                         children: [
-                          Text("Hi Joe,", style: TextStyle(
+                          Text("Hi User,", style: TextStyle(
                             fontSize: 35,
                             fontWeight: FontWeight.bold,
                           ),),
@@ -215,77 +215,87 @@ class _homeState extends State<home> {
                         ],
                       ),
                     ), //med and focus
-                    Container(
-                      height: 240,
-                      child: Stack(
-                        children: [
-                          Container(
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Quiz(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        height: 240,
+                        child: Stack(
+                          children: [
+                            Container(
 
-                            margin: EdgeInsets.only(top: 35),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
+                              margin: EdgeInsets.only(top: 35),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
 
-                                Container(
-                                  width: 338,
-                                  height: 200 ,
+                                  Container(
+                                    width: 338,
+                                    height: 200 ,
 
-                                  decoration: BoxDecoration(
-                                      color: Color(0xFFE6DDF6),
-                                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                                      boxShadow: [
-                                        BoxShadow(blurRadius: 4,
-                                            offset: Offset(2,2)
-                                        )
-                                      ]
+                                    decoration: BoxDecoration(
+                                        color: Color(0xFFE6DDF6),
+                                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        boxShadow: [
+                                          BoxShadow(blurRadius: 4,
+                                              offset: Offset(2,2)
+                                          )
+                                        ]
 
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Row(
-                                        children: [
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Row(
+                                          children: [
 
-                                          Container(
+                                            Container(
+                                                margin: EdgeInsets.only(left: 30),
+                                                child: Text("Stress-o-Meter", style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w500,
+
+                                                ),))
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
                                               margin: EdgeInsets.only(left: 30),
-                                              child: Text("Stress-o-Meter", style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w500,
-
-                                              ),))
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            margin: EdgeInsets.only(left: 30),
-                                            child: Text(
-                                              '''Answer a few questions about your  
+                                              child: Text(
+                                                '''Answer a few questions about your  
 everyday life and get to know the 
 level of stress you are experiencing'''
-                                              ,style: TextStyle(
-                                              fontSize: 15,
+                                                ,style: TextStyle(
+                                                fontSize: 15,
 
-                                            ),
+                                              ),
 
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ],
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                ),
 
 
 
 
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                          Positioned(left:310,
-                              top: 80,
-                              child: Image.asset("assets/images/checkbox.png"))
-                        ],
+                            Positioned(left:310,
+                                top: 80,
+                                child: Image.asset("assets/images/checkbox.png"))
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(

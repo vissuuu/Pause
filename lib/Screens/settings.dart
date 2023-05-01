@@ -80,6 +80,7 @@ class _SettingsPageState extends State<SettingsPage> {
               title: const Text('Change Password'),
               onTap: () {
                 // Navigate to the password change page
+
               },
             ),
             const Divider(),
