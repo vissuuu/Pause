@@ -7,6 +7,7 @@ import 'package:the_pause/meditation/medi_final.dart';
 import 'package:the_pause/focus/focus2.dart';
 import 'package:the_pause/meditation/med%202.dart';
 import 'package:the_pause/meditation/med.dart';
+import 'package:the_pause/model/flask.dart';
 import 'package:the_pause/screens/quiz.dart';
 import 'nav.dart';
 
@@ -18,7 +19,16 @@ class home extends StatefulWidget {
   State<home> createState() => _homeState();
 }
 
+
 class _homeState extends State<home> {
+
+
+  @override
+  void initState() {
+    var y =predictAnx(20);
+    print(y);
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     final List<String> affirmations = [    'You are capable of amazing things!',    'You are strong and resilient!',    'You are loved and appreciated!',    'You are worthy of happiness and success!',    'You are beautiful both inside and out!',  ];
