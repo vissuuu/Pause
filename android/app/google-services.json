@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "238641678238",
+    "project_id": "the-pause-ffcda",
+    "storage_bucket": "the-pause-ffcda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238641678238:android:ec13ce05fa87408f81388f",
+        "android_client_info": {
+          "package_name": "com.example.the_pause"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238641678238-1m3rn5o7dhjmgrqd8ptmn5s17a754cdj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoO3BqGGcwckhdHylx8h86GY6Mp694c_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238641678238-1m3rn5o7dhjmgrqd8ptmn5s17a754cdj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
