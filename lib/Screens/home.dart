@@ -22,13 +22,6 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
 
-
-  @override
-  void initState() {
-    var y =predictAnx(20);
-    print(y);
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
     final List<String> affirmations = [    'You are capable of amazing things!',    'You are strong and resilient!',    'You are loved and appreciated!',    'You are worthy of happiness and success!',    'You are beautiful both inside and out!',  ];
@@ -117,7 +110,7 @@ class _homeState extends State<home> {
                     Container(
                       margin: EdgeInsets.only(left: 50),
                       child: Row(
-                        children: [
+                        children: const [
                           Text("What would you like to do?", style: TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.w500

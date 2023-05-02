@@ -1275,8 +1275,10 @@ class _MyPageState extends State<Quiz> {
               ),
             ),
             SizedBox(height: 20),
+
             ElevatedButton(
               onPressed: () {
+
                 setState(() {
                   res = predictAnx([
                     q1,
@@ -1301,21 +1303,13 @@ class _MyPageState extends State<Quiz> {
                   ]);
                 });
 
-                Navigator.push(
+                print(res);
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => MeditativeMasteryQuizPage()),
+                      builder: (context) => MeditativeMasteryQuizPage(a: res)),
                 );
               },
-              child: Text(
-                'Get your results!',
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16.0,
-                ),
-              ),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
                     Color(0xFF8B80F8)),
@@ -1327,6 +1321,15 @@ class _MyPageState extends State<Quiz> {
                 ),
                 padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                   EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                ),
+              ),
+              child: Text(
+                'Get your results!',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16.0,
                 ),
               ),
             ),

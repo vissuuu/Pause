@@ -3,7 +3,15 @@ import 'dart:math';
 
 import 'package:the_pause/Screens/quiz.dart';
 
-class MeditativeMasteryQuizPage extends StatelessWidget {
+class MeditativeMasteryQuizPage extends StatefulWidget {
+  final Future<dynamic> a;
+  const MeditativeMasteryQuizPage({required this.a, Key? key}) : super(key: key);
+  @override
+  State<MeditativeMasteryQuizPage> createState() => _MeditativeMasteryQuizPageState();
+}
+
+class _MeditativeMasteryQuizPageState extends State<MeditativeMasteryQuizPage> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -67,128 +75,127 @@ class MeditativeMasteryQuizPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 0, bottom: 20),
                 // adjust the value as needed
-                child: Flexible(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          spreadRadius: 20,
-                          blurRadius: 14,
-                          offset: Offset(0, 10),
-                        ),
-                      ],
+                // child: Flexible(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40),
                     ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 35),
-                        FutureBuilder(
-                            future: res,
-                            builder: (context, AsyncSnapshot snapshot) {
-                              if (snapshot.hasData) {
-                                return Text(
-                                  'Here are your awaited \n results: ${snapshot
-                                      .data}',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black87,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                );
-                              }
-                              else {
-                                return Text(
-                                  'Here are your awaited \n results: ',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.black87,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                );
-                              }
-                            }),
-                        SizedBox(height: 0),
-                        Image.asset(
-                          'assets/images/quiz_result.png',
-                          height: 258,
-                          width: 250,
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          'It seems like your stress level',
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            color: Colors.black87,
-                            fontSize: 23,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          text1,
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            color: Colors.black87,
-                            fontSize: 23,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        SizedBox(height: 20),
-                        Text(
-                          text2,
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            color: Color(0xFF8B80F8),
-                            fontSize: 60,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        Padding(
-                          padding: EdgeInsets.all(27.0),
-                          child: Text(
-                            text3,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        spreadRadius: 20,
+                        blurRadius: 14,
+                        offset: Offset(0, 10),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 35),
+                      FutureBuilder(
+                        future: widget.a,
+                          builder: (context, AsyncSnapshot snapshot){
+                        if(snapshot.hasData){
+                          return Text(
+                            'Here are your awaited \n results: ${snapshot.data.toString()}',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               color: Colors.black87,
                               fontSize: 20,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          );
+                        }
+                        else{
+                          return Text(
+                            'Here are your awaited \n results: ',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              color: Colors.black87,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          );
+                        }
+                      }),
+                      SizedBox(height: 0),
+                      Image.asset(
+                        'assets/images/quiz_result.png',
+                        height: 258,
+                        width: 250,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'It seems like your stress level',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: Colors.black87,
+                          fontSize: 23,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 3),
+                      Text(
+                        text1,
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: Colors.black87,
+                          fontSize: 23,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        text2,
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: Color(0xFF8B80F8),
+                          fontSize: 60,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: EdgeInsets.all(27.0),
+                        child: Text(
+                          text3,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Colors.black87,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 80),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            top: BorderSide(
+                              color: Color(0xFF8B80F8),
+                              width: 1,
+                            ),
+                            bottom: BorderSide(
+                              color: Color(0xFF8B80F8),
+                              width: 1,
                             ),
                           ),
                         ),
-                        SizedBox(height: 80),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 30),
-                          decoration: BoxDecoration(
-                            border: Border(
-                              top: BorderSide(
-                                color: Color(0xFF8B80F8),
-                                width: 1,
-                              ),
-                              bottom: BorderSide(
-                                color: Color(0xFF8B80F8),
-                                width: 1,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
+                // ),
               ),
             ],
           ),
