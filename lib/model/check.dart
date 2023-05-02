@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:the_pause/Screens/login.dart';
-import 'package:the_pause/landing_page.dart';
+// import 'package:the_pause/landing_page.dart';
 import 'package:the_pause/login_page.dart';
 import 'package:the_pause/model/auth.dart';
 import 'package:the_pause/screens/nav.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'onboarding_page.dart';
-import 'login_page.dart';
+import 'package:the_pause/model/check.dart';
+import 'onboarding_page1.dart';
+// import 'login_page.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -43,12 +44,12 @@ class LandingPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 230),
+              SizedBox(height: 200),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => OnboardingPages()),
+                    MaterialPageRoute(builder: (context) => OnboardingPage1()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -74,7 +75,7 @@ class LandingPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => Check()),
                   );
                 },
                 child: Text(
