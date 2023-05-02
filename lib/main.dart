@@ -36,6 +36,6 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Quiz());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Check());
   }
 }

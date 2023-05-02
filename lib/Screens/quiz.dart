@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:the_pause/model/flask.dart';
 import 'quiz_result.dart';
+
+var res;
 
 class Quiz extends StatefulWidget {
   @override
@@ -7,6 +10,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _MyPageState extends State<Quiz> {
+
   int q1 = 0;
   int q2 = 0;
   int q3 = 0;
@@ -26,6 +30,8 @@ class _MyPageState extends State<Quiz> {
   int q17 = 0;
   int q18 = 0;
   int q19 = 0;
+
+  // List<int> a ;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +61,7 @@ class _MyPageState extends State<Quiz> {
               ),
             ),
             // Text
-            SizedBox(height:20),
+            SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
@@ -119,12 +125,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
             //q2
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How much stress do you typically experience everyday?',
+                'How many new places do you visit?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -181,8 +186,7 @@ class _MyPageState extends State<Quiz> {
                 ],
               ),
             ),
-            SizedBox(height:20),
-
+            SizedBox(height: 20),
 
 
             //q3
@@ -247,7 +251,6 @@ class _MyPageState extends State<Quiz> {
               ),
             ),
             SizedBox(height: 20),
-
 
 
             //q4
@@ -318,7 +321,7 @@ class _MyPageState extends State<Quiz> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How many people do you help achieve a better life?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -382,7 +385,7 @@ class _MyPageState extends State<Quiz> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'With how many people do you interact with during a typical day?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -442,12 +445,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
             //q7
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How many remarkable achievements are you proud of?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -507,13 +509,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q8
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How many times do you donate your time or money to good causes?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -573,13 +573,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q9
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                '[1 if below 25, else 2]What is your body mass index (bmi) range',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -639,13 +637,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q10
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How well do you complete your weekly to-do lists?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -705,13 +701,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q11
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'In a typical day, how many hours do you experience flow? ',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -771,13 +765,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q12
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How many fruits or vegetables do you eat in a day?How many steps (in thousands) do you typically walk everyday? ',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -837,12 +829,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
             //q13
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'For how many years ahead is your life vision very clear for?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -902,12 +893,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
             //q14
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How many days of vacation do you typically lose every year ?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -967,13 +957,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q15
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How often do you shout or sulk at somebody?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -1033,14 +1021,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
-
             //q16
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                '[1 for insufficient, 2 for sufficient]How sufficient is your income to    cover basic life expenses?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -1100,13 +1085,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q17
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How many recognitions have you received in your life?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -1166,13 +1149,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q18
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How many hours do you spend everyday doing what you are passionate about?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -1232,13 +1213,11 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
 
 
-
-
             //q19
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                'How many fruits or vegetables do you eat in a day?',
+                'How well do you balance your work and life?',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -1298,9 +1277,34 @@ class _MyPageState extends State<Quiz> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                setState(() {
+                  res = predictAnx([
+                    q1,
+                    q2,
+                    q3,
+                    q4,
+                    q5,
+                    q6,
+                    q7,
+                    q8,
+                    q9,
+                    q10,
+                    q11,
+                    q12,
+                    q13,
+                    q14,
+                    q15,
+                    q16,
+                    q17,
+                    q18,
+                    q19
+                  ]);
+                });
+
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MeditativeMasteryQuizPage()),
+                  MaterialPageRoute(
+                      builder: (context) => MeditativeMasteryQuizPage()),
                 );
               },
               child: Text(
@@ -1313,7 +1317,8 @@ class _MyPageState extends State<Quiz> {
                 ),
               ),
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF8B80F8)),
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    Color(0xFF8B80F8)),
                 minimumSize: MaterialStateProperty.all<Size>(Size(200, 61)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(

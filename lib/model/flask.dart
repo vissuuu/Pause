@@ -6,7 +6,7 @@ import 'dart:convert';
 Future predictAnx(var a) async {
   print(a);
   var client = http.Client();
-  var uri = Uri.parse("http://192.168.1.4:8080/predict");
+  var uri = Uri.parse("http://10.7.8.191:8080/predict");
   Map<String, String> headers = {"Content-type": "application/json"};
   String jsonString = json.encode(a);
   try {
