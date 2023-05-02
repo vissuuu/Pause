@@ -6,11 +6,12 @@ import 'package:the_pause/Screens/profile1.dart';
 import 'package:the_pause/Screens/quiz.dart';
 import 'package:the_pause/focus/timerend.dart';
 import 'package:the_pause/meditation/med 2.dart';
-import 'package:the_pause/landing_page.dart';
+// import 'package:the_pause/landing_page.dart';
 import 'package:the_pause/meditation/medi_final.dart';
 import 'package:the_pause/model/check.dart';
 import 'package:the_pause/meditation/med.dart';
 import 'package:the_pause/screens/signup.dart';
+import 'package:the_pause/splashscreen.dart';
 import 'firebase_options.dart';
 import 'login_page.dart';
 import 'package:the_pause/screens/nav.dart';
@@ -36,6 +37,6 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Check());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
   }
 }
